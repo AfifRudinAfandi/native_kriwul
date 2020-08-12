@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">delivery</string>
+    <string name="title_home">Beranda</string>
+    <string name="title_promo">Promo</string>
+    <string name="title_order">My Order</string>
+    <string name="title_profile">Profile</string>
+    <string name="kriwul_indonesia">Kriwul Indonesia</string>
+</resources>
