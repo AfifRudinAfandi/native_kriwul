@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:background="@drawable/view_top_radius_18"
+    android:orientation="vertical"
+    android:id="@+id/container_bottom_sheet">
+
+    <ImageButton
+        android:id="@+id/close_bottom_sheet"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="end"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_close"
+        android:padding="5dp"
+        style="@style/Widget.AppCompat.Button.Borderless"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="18dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_people"
+                android:scaleType="fitCenter"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selamat Datang!"
+                android:fontFamily="@font/nunitosans_extrabold"
+                android:textColor="@color/colorBlack"
+                android:layout_marginLeft="14dp"
+                android:textSize="18sp"/>
+        </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lengkapi profile pribadi untuk kemudahan\ntransaksi anda."/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:layout_marginTop="32dp"
+        android:weightSum="10"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="4.7"
+            android:text="Skip"
+            android:textSize="14sp"
+            android:fontFamily="@font/nunitosans_bold"
+            android:textColor="@color/colorRed_2"
+            android:textAllCaps="false"
+            android:focusableInTouchMode="true"
+            android:defaultFocusHighlightEnabled="true"
+            android:textColorHighlight="@color/colorWhite"
+            android:layout_gravity="start"
+            android:background="@drawable/outline_radius_8"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight=".6"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="4.7"
+            android:background="@drawable/view_radius_8"
+            android:backgroundTint="@color/colorRed_2"
+            android:fontFamily="@font/nunitosans_bold"
+            android:text="Lengkapi Profile"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>

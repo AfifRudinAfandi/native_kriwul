@@ -2,6 +2,10 @@ package com.build.delivery;
 
 import android.os.Build;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,6 +14,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,8 +27,19 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupWithNavController(navView, navController);
 
-//        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+
+
     }
 
+    @Override
+    protected void onStart() {
+        final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(MainActivity.this, R.style.BottomSheetDialogTheme);
+        View bottomSheedView = LayoutInflater.from(getApplicationContext()).inflate(
+                R.layout.fragment_alert_emty_data,(LinearLayout)findViewById(R.id.container_bottom_sheet)
+        );
+                bottomSheetDialog.setContentView(bottomSheedView);
+                bottomSheetDialog.show();
+        super.onStart();
+    }
 }
 
