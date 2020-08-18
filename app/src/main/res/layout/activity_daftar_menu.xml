@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".DaftarMenu">
+    tools:context=".DaftarMenu.DaftarMenu">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -68,13 +68,13 @@
                 android:layout_height="24dp"
                 android:layout_gravity="center"
                 android:src="@drawable/ic_bell"
-                android:tint="@color/colorGray_2"/>
+                app:tint="@color/colorGray_2" />
             <ImageView
                 android:layout_width="10dp"
                 android:layout_height="10dp"
                 android:layout_gravity="right"
                 android:src="@drawable/ic_oval"
-                android:tint="@color/colorRed_2"/>
+                app:tint="@color/colorRed_2" />
         </FrameLayout>
     </RelativeLayout>
     <LinearLayout
@@ -108,8 +108,93 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:paddingTop="10dp"
             android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Menu Terbaik"
+                android:textSize="18sp"
+                android:fontFamily="@font/nunitosans_bold"
+                android:textColor="@color/colorBlack"
+                android:layout_marginLeft="30dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pas untuk anda yang sedang lapar"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunitosans_regular"
+                android:textColor="@color/colorGray"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="18dp"/>
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="16dp"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/filter_semua"
+                        android:layout_width="wrap_content"
+                        android:layout_height="33dp"
+                        android:paddingHorizontal="22dp"
+                        android:textSize="12sp"
+                        android:text="Semua Kategori"
+                        android:fontFamily="@font/nunitosans_semibold"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorGray"
+                        android:background="@drawable/view_circular_horizontal"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:backgroundTint="@color/colorGray_2"/>
+                    <Button
+                        android:id="@+id/filter_makanan"
+                        android:layout_marginLeft="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="33dp"
+                        android:paddingHorizontal="22dp"
+                        android:textSize="12sp"
+                        android:text="Makanan"
+                        android:fontFamily="@font/nunitosans_semibold"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorGray"
+                        android:background="@drawable/view_circular_horizontal"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:backgroundTint="@color/colorGray_2"/>
+                    <Button
+                        android:id="@+id/filter_minuman"
+                        android:layout_marginLeft="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="33dp"
+                        android:paddingHorizontal="22dp"
+                        android:textSize="12sp"
+                        android:text="Minuman"
+                        android:fontFamily="@font/nunitosans_semibold"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorGray"
+                        android:background="@drawable/view_circular_horizontal"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:backgroundTint="@color/colorGray_2"/>
+                    <Button
+                        android:id="@+id/filter_lainnya"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="33dp"
+                        android:paddingHorizontal="22dp"
+                        android:textSize="12sp"
+                        android:text="Lainnya"
+                        android:fontFamily="@font/nunitosans_semibold"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorGray"
+                        android:background="@drawable/view_circular_horizontal"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:backgroundTint="@color/colorGray_2"/>
+                </LinearLayout>
 
+            </HorizontalScrollView>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

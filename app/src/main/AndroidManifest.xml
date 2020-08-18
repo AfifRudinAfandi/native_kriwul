@@ -13,7 +13,7 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".Verif"
             android:screenOrientation="portrait"/>
-        <activity android:name=".DaftarMenu"
+        <activity android:name=".DaftarMenu.DaftarMenu"
             android:screenOrientation="portrait"/>
         <activity
             android:name=".Login"

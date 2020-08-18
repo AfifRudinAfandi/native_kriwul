@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.build.delivery.Adapter.MenuAdapter;
 import com.build.delivery.Adapter.OutletAdapter;
-import com.build.delivery.Login;
+import com.build.delivery.DaftarMenu.DaftarMenu;
 import com.build.delivery.Model.Menu;
 import com.build.delivery.Model.Outlet;
 import com.build.delivery.R;
@@ -71,11 +71,11 @@ public class HomeFragment extends Fragment {
 
 
 
-        TextView allmenu = (TextView) root.findViewById(R.id.allmenu);
+        TextView allmenu = root.findViewById(R.id.allmenu);
         allmenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), Login.class);
+                Intent intent = new Intent(getActivity(), DaftarMenu.class);
                 startActivity(intent);
             }
         });
