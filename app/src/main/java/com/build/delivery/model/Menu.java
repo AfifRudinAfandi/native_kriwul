@@ -1,4 +1,4 @@
-package com.build.delivery.Model;
+package com.build.delivery.model;
 
 public class Menu {
     private String menu;

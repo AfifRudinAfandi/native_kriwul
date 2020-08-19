@@ -1,11 +1,11 @@
-package com.build.delivery.Adapter;
+package com.build.delivery.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.build.delivery.Model.SliderItem;
+import com.build.delivery.model.SliderItem;
 import com.build.delivery.R;
 import com.build.delivery.ui.home.HomeFragment;
 import com.bumptech.glide.Glide;

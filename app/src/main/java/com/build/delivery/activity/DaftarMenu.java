@@ -1,4 +1,4 @@
-package com.build.delivery.DaftarMenu;
+package com.build.delivery.activity;
 
 import android.graphics.Color;
 import android.graphics.PorterDuff;
@@ -10,12 +10,23 @@ import android.widget.FrameLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.build.delivery.R;
+import com.build.delivery.adapter.RecyclerViewAdapterMenu;
+
+import java.util.ArrayList;
 
 public class DaftarMenu extends AppCompatActivity {
 
+    private static final String TAG = "Daftar Menu";
     private Button btnSemua,btnMakanan,btnMinuman,btnLain;
+
+    //vars
+    private ArrayList<String> mNames = new ArrayList<>();
+    private ArrayList<String> mImageUrls = new ArrayList<>();
+    private ArrayList<String> mPrice = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +43,7 @@ public class DaftarMenu extends AppCompatActivity {
         });
 
         initComponent();
+        initImageBitmaps();
 
     }
 
@@ -104,4 +116,54 @@ public class DaftarMenu extends AppCompatActivity {
             }
         }
     }
+
+    private void initImageBitmaps(){
+
+
+
+        mImageUrls.add("https://i.ibb.co/N9yK1f2/img.jpg");
+        mNames.add("Kriwul Sambel");
+        mPrice.add("Rp 16k");
+
+
+        mImageUrls.add("https://i.ibb.co/FHY0cYF/img2.jpg");
+        mNames.add("Kriwul Geprek");
+        mPrice.add("Rp 8k-10k");
+
+        mImageUrls.add("https://i.ibb.co/6YyDV6P/img3.jpg");
+        mNames.add("Es Lemon Tea");
+        mPrice.add("Rp 5k");
+
+        mImageUrls.add("https://i.ibb.co/q7t4SDS/img4.jpg");
+        mNames.add("Kriwul Original");
+        mPrice.add("Rp 14k");
+
+        mImageUrls.add("https://i.ibb.co/N9yK1f2/img.jpg");
+        mNames.add("Kriwul Sambel");
+        mPrice.add("Rp 16k");
+
+        mImageUrls.add("https://i.ibb.co/FHY0cYF/img2.jpg");
+        mNames.add("Kriwul Geprek");
+        mPrice.add("Rp 8k-10k");
+
+        mImageUrls.add("https://i.ibb.co/6YyDV6P/img3.jpg");
+        mNames.add("Es Lemon Tea");
+        mPrice.add("Rp 5k");
+
+        mImageUrls.add("https://i.ibb.co/q7t4SDS/img4.jpg");
+        mNames.add("Kriwul Original");
+        mPrice.add("Rp 14k");
+
+
+        initRecyclerView();
+    }
+
+    private void initRecyclerView(){
+        RecyclerView recyclerView = findViewById(R.id.recyclerv_view);
+        RecyclerViewAdapterMenu adapter = new RecyclerViewAdapterMenu(this, mNames, mImageUrls, mPrice);
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new GridLayoutManager(this,2));
+    }
+
+
 }

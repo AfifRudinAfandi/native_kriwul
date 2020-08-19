@@ -13,12 +13,12 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.build.delivery.Adapter.MenuAdapter;
-import com.build.delivery.Adapter.OutletAdapter;
-import com.build.delivery.DaftarMenu.DaftarMenu;
-import com.build.delivery.Model.Menu;
-import com.build.delivery.Model.Outlet;
 import com.build.delivery.R;
+import com.build.delivery.activity.DaftarMenu;
+import com.build.delivery.adapter.MenuAdapter;
+import com.build.delivery.adapter.OutletAdapter;
+import com.build.delivery.model.Menu;
+import com.build.delivery.model.Outlet;
 
 import java.util.ArrayList;
 
@@ -68,8 +68,8 @@ public class HomeFragment extends Fragment {
         recyclerView.setLayoutManager(layoutManager2);
         recyclerView.setAdapter(adaptermenu);
 
-
-
+//      This Grid View Output
+//      RecyclerView.LayoutManager layoutManager2 = new GridLayoutManager(this.getActivity(),2);
 
         TextView allmenu = root.findViewById(R.id.allmenu);
         allmenu.setOnClickListener(new View.OnClickListener() {

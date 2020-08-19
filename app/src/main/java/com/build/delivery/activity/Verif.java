@@ -1,6 +1,4 @@
-package com.build.delivery;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.build.delivery.activity;
 
 import android.content.Intent;
 import android.os.Build;
@@ -8,10 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.FrameLayout;
-import android.widget.Toast;
 
-import com.build.delivery.ui.home.HomeFragment;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.build.delivery.R;
 import com.poovam.pinedittextfield.PinField;
 import com.poovam.pinedittextfield.SquarePinField;
 

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".DaftarMenu.DaftarMenu">
+    tools:context=".activity.DaftarMenu">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -193,8 +193,14 @@
                         style="@style/Widget.AppCompat.Button.Borderless"
                         android:backgroundTint="@color/colorGray_2"/>
                 </LinearLayout>
-
             </HorizontalScrollView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:paddingTop="20dp"
+                android:layout_width="match_parent"
+                android:paddingRight="16dp"
+                android:overScrollMode="never"
+                android:layout_height="match_parent"
+                android:id="@+id/recyclerv_view"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

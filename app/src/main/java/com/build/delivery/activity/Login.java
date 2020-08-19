@@ -1,4 +1,4 @@
-package com.build.delivery;
+package com.build.delivery.activity;
 
 import android.content.Intent;
 import android.os.Build;
@@ -9,6 +9,8 @@ import android.view.WindowManager;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.build.delivery.R;
 
 public class Login extends AppCompatActivity {
 

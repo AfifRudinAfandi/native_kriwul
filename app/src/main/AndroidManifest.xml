@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.build.delivery">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,14 +11,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".Verif"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".DaftarMenu.DaftarMenu"
-            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.DetailMenu"></activity>
         <activity
-            android:name=".Login"
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.Verif"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.DaftarMenu"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.Login"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
             <intent-filter>

@@ -1,4 +1,4 @@
-package com.build.delivery.Adapter;
+package com.build.delivery.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.build.delivery.Model.Outlet;
+import com.build.delivery.model.Outlet;
 import com.build.delivery.R;
 
 import java.util.ArrayList;
