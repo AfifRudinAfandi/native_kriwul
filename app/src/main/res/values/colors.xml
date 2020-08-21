@@ -9,9 +9,12 @@
     <color name="colorRedGray">#DB8C99</color>
     <color name="colorRedMenu">#FFDEE3</color>
     <color name="colorOrange">#FFC63E</color>
+    <color name="colorOrange_2">#F4B726</color>
+    <color name="colorOrange_3">#FCF5E4</color>
     <color name="colorWhite">#FAFAFA</color>
     <color name="colorGray">#C1BFBF</color>
     <color name="colorGray_2">#E9E9E9</color>
+    <color name="colorGray_3">#F4F4F4</color>
     <color name="colorBlack">#000000</color>
     <color name="colorTosca">#06C9B2</color>
     <color name="colorGreen">#72D17F</color>

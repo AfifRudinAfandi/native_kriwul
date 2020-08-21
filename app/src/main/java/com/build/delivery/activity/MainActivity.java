@@ -26,19 +26,17 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView navView = findViewById(R.id.nav_view);
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupWithNavController(navView, navController);
-
-
-
     }
 
     @Override
     protected void onStart() {
         final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(MainActivity.this, R.style.BottomSheetDialogTheme);
-        View bottomSheedView = LayoutInflater.from(getApplicationContext()).inflate(
-                R.layout.fragment_alert_emty_data,(LinearLayout)findViewById(R.id.container_bottom_sheet)
+        View bottomSheedView = LayoutInflater.from(getApplicationContext()).inflate
+                (R.layout.fragment_alert_emty_data,(LinearLayout)findViewById(R.id.container_bottom_sheet)
         );
                 bottomSheetDialog.setContentView(bottomSheedView);
                 bottomSheetDialog.show();
+
         super.onStart();
     }
 }

@@ -6,10 +6,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.build.delivery.R;
@@ -18,14 +18,14 @@ import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
-public class RecyclerViewAdapterMenu extends RecyclerView.Adapter<RecyclerViewAdapterMenu.ViewHolder>{
+public class RecyclerViewAdapterMenuBeranda extends RecyclerView.Adapter<RecyclerViewAdapterMenuBeranda.ViewHolder>{
 
     private ArrayList<String> mImageNames = new ArrayList<>();
     private ArrayList<String> mImages = new ArrayList<>();
     private ArrayList<String> mPrice = new ArrayList<>();
     private Context mContext;
 
-    public RecyclerViewAdapterMenu(Context context,  ArrayList<String> imageNames, ArrayList<String> images ,ArrayList<String> price) {
+    public RecyclerViewAdapterMenuBeranda(Context context, ArrayList<String> imageNames, ArrayList<String> images , ArrayList<String> price) {
         mImageNames = imageNames;
         mImages = images;
         mPrice = price;
@@ -34,7 +34,7 @@ public class RecyclerViewAdapterMenu extends RecyclerView.Adapter<RecyclerViewAd
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_menu_all, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_menu, parent, false);
         ViewHolder holder = new ViewHolder(view);
         return holder;
     }
@@ -75,14 +75,14 @@ public class RecyclerViewAdapterMenu extends RecyclerView.Adapter<RecyclerViewAd
         ImageView image;
         TextView imageName;
         TextView textPrice;
-        LinearLayout parentLayout;
+        CardView parentLayout;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            image = itemView.findViewById(R.id.image);
-            imageName = itemView.findViewById(R.id.TitleMenu);
-            textPrice = itemView.findViewById(R.id.PriceMenu);
-            parentLayout = itemView.findViewById(R.id.parent_layout);
+            image = itemView.findViewById(R.id.image_beranda_menu);
+            imageName = itemView.findViewById(R.id.menu);
+            textPrice = itemView.findViewById(R.id.price);
+            parentLayout = itemView.findViewById(R.id.parent_menu);
         }
     }
 }

@@ -6,35 +6,35 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.build.delivery.DetailMerchants;
 import com.build.delivery.R;
-import com.build.delivery.activity.DetailMenu;
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
-public class RecyclerViewAdapterMenu extends RecyclerView.Adapter<RecyclerViewAdapterMenu.ViewHolder>{
+public class RecyclerViewAdapterMerchants extends RecyclerView.Adapter<RecyclerViewAdapterMerchants.ViewHolder>{
 
     private ArrayList<String> mImageNames = new ArrayList<>();
     private ArrayList<String> mImages = new ArrayList<>();
-    private ArrayList<String> mPrice = new ArrayList<>();
+    private ArrayList<String> mRating = new ArrayList<>();
     private Context mContext;
 
-    public RecyclerViewAdapterMenu(Context context,  ArrayList<String> imageNames, ArrayList<String> images ,ArrayList<String> price) {
+    public RecyclerViewAdapterMerchants(Context context, ArrayList<String> imageNames, ArrayList<String> images , ArrayList<String> rating) {
         mImageNames = imageNames;
         mImages = images;
-        mPrice = price;
+        mRating = rating;
         mContext = context;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_menu_all, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_outlate, parent, false);
         ViewHolder holder = new ViewHolder(view);
         return holder;
     }
@@ -48,17 +48,17 @@ public class RecyclerViewAdapterMenu extends RecyclerView.Adapter<RecyclerViewAd
                 .into(holder.image);
 
         holder.imageName.setText(mImageNames.get(position));
-        holder.textPrice.setText(mPrice.get(position));
+        holder.textRating.setText(mRating.get(position));
 
         holder.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(mContext, mImageNames.get(position), Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(mContext, DetailMenu.class);
+                Intent intent = new Intent(mContext, DetailMerchants.class);
                 intent.putExtra("image_url", mImages.get(position));
                 intent.putExtra("image_name", mImageNames.get(position));
-                intent.putExtra("price", mPrice.get(position));
+                intent.putExtra("rating", mRating.get(position));
                 mContext.startActivity(intent);
             }
         });
@@ -74,15 +74,15 @@ public class RecyclerViewAdapterMenu extends RecyclerView.Adapter<RecyclerViewAd
 
         ImageView image;
         TextView imageName;
-        TextView textPrice;
-        LinearLayout parentLayout;
+        TextView textRating;
+        CardView parentLayout;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            image = itemView.findViewById(R.id.image);
-            imageName = itemView.findViewById(R.id.TitleMenu);
-            textPrice = itemView.findViewById(R.id.PriceMenu);
-            parentLayout = itemView.findViewById(R.id.parent_layout);
+            image = itemView.findViewById(R.id.image_outlate);
+            imageName = itemView.findViewById(R.id.outlateTitle);
+            textRating = itemView.findViewById(R.id.rating);
+            parentLayout = itemView.findViewById(R.id.outlateParent);
         }
     }
 }

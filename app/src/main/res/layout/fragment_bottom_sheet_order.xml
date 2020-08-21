@@ -1,42 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="@dimen/activity_horizontal_margin"
+    android:backgroundTint="@color/colorTosca"
     android:background="@drawable/view_top_radius_18"
     android:orientation="vertical"
-    android:id="@+id/container_bottom_sheet">
-
-<!--    <View-->
-<!--        android:id="@+id/close_empty_data"-->
-<!--        android:layout_width="20dp"-->
-<!--        android:layout_height="20dp"-->
-<!--        android:layout_gravity="end"-->
-<!--        android:scaleType="fitCenter"-->
-<!--        android:background="@drawable/ic_close"-->
-<!--        android:padding="5dp"/>-->
-        <LinearLayout
+    android:paddingVertical="10dp"
+    android:elevation="8dp"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="160dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+    <ImageButton
+        android:id="@+id/close_bottom_sheet"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="end"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_close"
+        android:padding="5dp"
+        style="@style/Widget.AppCompat.Button.Borderless"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="18dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_people"
+            android:scaleType="fitCenter"/>
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:layout_marginBottom="18dp"
-            android:orientation="horizontal">
-            <ImageView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:src="@drawable/ic_people"
-                android:scaleType="fitCenter"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Selamat Datang!"
-                android:fontFamily="@font/nunitosans_extrabold"
-                android:textColor="@color/colorBlack"
-                android:layout_marginLeft="18dp"
-                android:textSize="18sp"/>
-        </LinearLayout>
+            android:text="Selamat Datang!"
+            android:fontFamily="@font/nunitosans_extrabold"
+            android:textColor="@color/colorBlack"
+            android:layout_marginLeft="14dp"
+            android:textSize="18sp"/>
+    </LinearLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -53,7 +57,6 @@
             android:layout_height="52dp"
             android:layout_weight="4.7"
             android:text="Skip"
-            android:clickable="true"
             android:textSize="14sp"
             android:fontFamily="@font/nunitosans_bold"
             android:textColor="@color/colorRed_2"

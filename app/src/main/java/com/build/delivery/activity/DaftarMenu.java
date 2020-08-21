@@ -20,7 +20,6 @@ import java.util.ArrayList;
 
 public class DaftarMenu extends AppCompatActivity {
 
-    private static final String TAG = "Daftar Menu";
     private Button btnSemua,btnMakanan,btnMinuman,btnLain;
 
     //vars
@@ -120,40 +119,37 @@ public class DaftarMenu extends AppCompatActivity {
     private void initImageBitmaps(){
 
 
-
-        mImageUrls.add("https://i.ibb.co/N9yK1f2/img.jpg");
+        mImageUrls.add("https://i.ibb.co/5FwxsW2/img.jpg");
         mNames.add("Kriwul Sambel");
         mPrice.add("Rp 16k");
 
-
-        mImageUrls.add("https://i.ibb.co/FHY0cYF/img2.jpg");
+        mImageUrls.add("https://i.ibb.co/FzbXnFH/img2.jpg");
         mNames.add("Kriwul Geprek");
         mPrice.add("Rp 8k-10k");
 
-        mImageUrls.add("https://i.ibb.co/6YyDV6P/img3.jpg");
+        mImageUrls.add("https://i.ibb.co/zSSM7cf/img3.jpg");
         mNames.add("Es Lemon Tea");
         mPrice.add("Rp 5k");
 
-        mImageUrls.add("https://i.ibb.co/q7t4SDS/img4.jpg");
+        mImageUrls.add("https://i.ibb.co/j8vzGJR/img4.jpg");
         mNames.add("Kriwul Original");
         mPrice.add("Rp 14k");
 
-        mImageUrls.add("https://i.ibb.co/N9yK1f2/img.jpg");
+        mImageUrls.add("https://i.ibb.co/5FwxsW2/img.jpg");
         mNames.add("Kriwul Sambel");
         mPrice.add("Rp 16k");
 
-        mImageUrls.add("https://i.ibb.co/FHY0cYF/img2.jpg");
+        mImageUrls.add("https://i.ibb.co/FzbXnFH/img2.jpg");
         mNames.add("Kriwul Geprek");
         mPrice.add("Rp 8k-10k");
 
-        mImageUrls.add("https://i.ibb.co/6YyDV6P/img3.jpg");
+        mImageUrls.add("https://i.ibb.co/zSSM7cf/img3.jpg");
         mNames.add("Es Lemon Tea");
         mPrice.add("Rp 5k");
 
-        mImageUrls.add("https://i.ibb.co/q7t4SDS/img4.jpg");
+        mImageUrls.add("https://i.ibb.co/j8vzGJR/img4.jpg");
         mNames.add("Kriwul Original");
         mPrice.add("Rp 14k");
-
 
         initRecyclerView();
     }
