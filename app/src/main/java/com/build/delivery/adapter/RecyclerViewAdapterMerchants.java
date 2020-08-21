@@ -12,7 +12,7 @@ import android.widget.Toast;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.build.delivery.DetailMerchants;
+import com.build.delivery.activity.DetailMerchants;
 import com.build.delivery.R;
 import com.bumptech.glide.Glide;
 

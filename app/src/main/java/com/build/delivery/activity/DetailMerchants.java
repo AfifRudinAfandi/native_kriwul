@@ -1,4 +1,4 @@
-package com.build.delivery;
+package com.build.delivery.activity;
 
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.build.delivery.R;
 import com.build.delivery.adapter.RecyclerViewAdapterMenu;
 import com.bumptech.glide.Glide;
 
